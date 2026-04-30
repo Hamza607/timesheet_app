@@ -1,0 +1,210 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@test.com",
+      "password": 123456,
+      "name": "John Doe",
+      "token": "kslaj21oi312312sakdj12l3kjdklasj21"
+    }
+  ],
+  "weeklyTimesheets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "weekStart": "2024-01-01",
+      "weekEnd": "2024-01-05",
+      "totalHours": 40,
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "weekStart": "2024-01-08",
+      "weekEnd": "2024-01-12",
+      "totalHours": 40,
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "weekStart": "2024-01-15",
+      "weekEnd": "2024-01-19",
+      "totalHours": 24,
+      "status": "Incomplete"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "weekStart": "2024-01-22",
+      "weekEnd": "2024-01-26",
+      "totalHours": 40,
+      "status": "Completed"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "weekStart": "2024-01-28",
+      "weekEnd": "2024-02-01",
+      "totalHours": 0,
+      "status": "Missing"
+    }
+  ],
+  "timesheetEntries": [
+    {
+      "id": 1,
+      "timesheetId": 1,
+      "date": "2024-01-01",
+      "project": "Website Redesign",
+      "task": "UI Development",
+      "hours": 8
+    },
+    {
+      "id": 2,
+      "timesheetId": 1,
+      "date": "2024-01-02",
+      "project": "Website Redesign",
+      "task": "API Integration",
+      "hours": 8
+    },
+    {
+      "id": 3,
+      "timesheetId": 1,
+      "date": "2024-01-03",
+      "project": "Internal Dashboard",
+      "task": "Bug Fixing",
+      "hours": 8
+    },
+    {
+      "id": 4,
+      "timesheetId": 1,
+      "date": "2024-01-04",
+      "project": "Internal Dashboard",
+      "task": "Testing",
+      "hours": 8
+    },
+    {
+      "id": 5,
+      "timesheetId": 1,
+      "date": "2024-01-05",
+      "project": "Website Redesign",
+      "task": "Code Review",
+      "hours": 8
+    },
+
+    {
+      "id": 6,
+      "timesheetId": 2,
+      "date": "2024-01-08",
+      "project": "Mobile App",
+      "task": "Feature Development",
+      "hours": 8
+    },
+    {
+      "id": 7,
+      "timesheetId": 2,
+      "date": "2024-01-09",
+      "project": "Mobile App",
+      "task": "Testing",
+      "hours": 8
+    },
+    {
+      "id": 8,
+      "timesheetId": 2,
+      "date": "2024-01-10",
+      "project": "Website Redesign",
+      "task": "UI Development",
+      "hours": 8
+    },
+    {
+      "id": 9,
+      "timesheetId": 2,
+      "date": "2024-01-11",
+      "project": "Internal Dashboard",
+      "task": "Bug Fixing",
+      "hours": 8
+    },
+    {
+      "id": 10,
+      "timesheetId": 2,
+      "date": "2024-01-12",
+      "project": "Mobile App",
+      "task": "Code Review",
+      "hours": 8
+    },
+
+    {
+      "id": 11,
+      "timesheetId": 3,
+      "date": "2024-01-15",
+      "project": "Mobile App",
+      "task": "Testing",
+      "hours": 6
+    },
+    {
+      "id": 12,
+      "timesheetId": 3,
+      "date": "2024-01-16",
+      "project": "Website Redesign",
+      "task": "UI Development",
+      "hours": 6
+    },
+    {
+      "id": 13,
+      "timesheetId": 3,
+      "date": "2024-01-17",
+      "project": "Internal Dashboard",
+      "task": "Bug Fixing",
+      "hours": 6
+    },
+    {
+      "id": 14,
+      "timesheetId": 3,
+      "date": "2024-01-18",
+      "project": "Mobile App",
+      "task": "Feature Development",
+      "hours": 6
+    },
+
+    {
+      "id": 15,
+      "timesheetId": 4,
+      "date": "2024-01-22",
+      "project": "Website Redesign",
+      "task": "UI Development",
+      "hours": 8
+    },
+    {
+      "id": 16,
+      "timesheetId": 4,
+      "date": "2024-01-23",
+      "project": "Website Redesign",
+      "task": "API Integration",
+      "hours": 8
+    },
+    {
+      "id": 17,
+      "timesheetId": 4,
+      "date": "2024-01-24",
+      "project": "Internal Dashboard",
+      "task": "Bug Fixing",
+      "hours": 8
+    },
+    {
+      "id": 18,
+      "timesheetId": 4,
+      "date": "2024-01-25",
+      "project": "Mobile App",
+      "task": "Testing",
+      "hours": 8
+    },
+    {
+      "id": 19,
+      "timesheetId": 4,
+      "date": "2024-01-26",
+      "project": "Mobile App",
+      "task": "Code Review",
+      "hours": 8
+    }
+  ]
+}
