@@ -13,7 +13,6 @@ export default function Login() {
 
   const storedUser = localStorage.getItem("user");
 
-  // If user is already logged in, don't show login page
   if (storedUser) {
     return <Navigate to="/timesheets" replace />;
   }
@@ -28,8 +27,6 @@ export default function Login() {
 
       localStorage.setItem("user", JSON.stringify(user));
 
-      // Go back to the protected route user originally wanted,
-      // otherwise go to /timesheets
       const redirectTo =
         (location.state as { from?: string })?.from || "/timesheets";
 
@@ -45,7 +42,7 @@ export default function Login() {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white">
       <div className="flex items-center justify-center px-6 py-12">
-        <form onSubmit={handleSubmit} className="w-full max-w-[510px]">
+        <form onSubmit={handleSubmit} className="w-full max-w-127.5">
           <h1 className="text-[22px] font-bold text-slate-900 mb-6">
             Welcome back
           </h1>
@@ -99,7 +96,7 @@ export default function Login() {
       </div>
 
       <div className="hidden lg:flex items-center justify-center bg-blue-600 px-12">
-        <div className="max-w-[540px] text-white">
+        <div className="max-w-135 text-white">
           <h2 className="text-4xl font-bold mb-6">ticktock</h2>
 
           <p className="text-base leading-7 text-blue-50">

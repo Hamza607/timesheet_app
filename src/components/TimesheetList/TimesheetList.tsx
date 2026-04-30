@@ -69,7 +69,6 @@ export default function TimesheetList() {
             Your Timesheets
           </h2>
 
-          {/* Filters */}
           <div className="flex flex-col sm:flex-row gap-2 mb-4">
             <select
               value={selectedDateRange}
@@ -100,7 +99,6 @@ export default function TimesheetList() {
             </select>
           </div>
 
-          {/* Table */}
           <div className="border border-gray-200 rounded-md overflow-hidden">
             <div className="w-full overflow-x-auto">
               <table className="w-full min-w-160 text-sm">
@@ -171,7 +169,6 @@ export default function TimesheetList() {
             </div>
           </div>
 
-          {/* Pagination footer */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
             <select
               value={itemsPerPage}
