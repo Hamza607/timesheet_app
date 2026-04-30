@@ -2,8 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { getTimesheetEntries } from "../../../api/timesheetApi";
 import type { TimesheetEntry } from "../../../types/timesheet";
 
-
-
 export function useTimesheetEntries(activeTimesheetId?: number | string) {
   const [entries, setEntries] = useState<TimesheetEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -20,7 +18,7 @@ export function useTimesheetEntries(activeTimesheetId?: number | string) {
           return;
         }
 
-        const data = await getTimesheetEntries(activeTimesheetId);
+        const data: any = await getTimesheetEntries(activeTimesheetId);
 
         setEntries(data);
       } catch (err: any) {

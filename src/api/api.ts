@@ -1,17 +1,32 @@
-const API_BASE_URL = "/api";
+import db from "../mock/db.json";
 
-export async function apiRequest(endpoint: string, options: RequestInit = {}) {
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-    headers: {
-      "Content-Type": "application/json",
-      ...(options.headers || {}),
-    },
-    ...options,
-  });
+type DbType = typeof db;
 
-  if (!response.ok) {
-    throw new Error("API request failed");
+export async function apiRequest(endpoint: string) {
+  const [path, queryString] = endpoint.split("?");
+
+  const resourceName = path.replace("/", "") as keyof DbType;
+  const resource = db[resourceName];
+
+  if (!resource) {
+    throw new Error(`Resource not found: ${resourceName}`);
   }
 
-  return response.json();
+  let data = Array.isArray(resource) ? [...resource] : resource;
+
+  if (queryString && Array.isArray(data)) {
+    const params = new URLSearchParams(queryString);
+
+    data = data.filter((item: any) => {
+      for (const [key, value] of params.entries()) {
+        if (String(item[key]) !== value) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+  }
+
+  return Promise.resolve(data);
 }

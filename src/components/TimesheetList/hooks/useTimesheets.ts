@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import type { Timesheet } from "../../../types/timesheet";
 import { getWeeklyTimesheets } from "../../../api/timesheetApi";
 
-
 export function useTimesheets(userId?: string | number) {
   const [timesheets, setTimesheets] = useState<Timesheet[]>([]);
   const [loading, setLoading] = useState(true);
@@ -21,7 +20,7 @@ export function useTimesheets(userId?: string | number) {
         setLoading(true);
         setError(null);
 
-        const data = await getWeeklyTimesheets(userId);
+        const data: any = await getWeeklyTimesheets(userId);
 
         if (isMounted) {
           setTimesheets(data);
