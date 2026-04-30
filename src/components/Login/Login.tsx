@@ -23,7 +23,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const user = await loginUser(email, password);
+      const user: any = await loginUser(email, password);
 
       localStorage.setItem("user", JSON.stringify(user));
 
