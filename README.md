@@ -1,75 +1,73 @@
-# React + TypeScript + Vite
+# Timesheet App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite web application for managing timesheets.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://timesheet-app-ddci.vercel.app/login
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+https://github.com/Hamza607/timesheet_app
 
-Note: This will impact Vite dev & build performances.
+## Setup Instructions
 
-## Expanding the ESLint configuration
+Follow these steps to run the project locally.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Clone the repository
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+git clone https://github.com/Hamza607/timesheet_app
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Go to the project folder
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+cd timesheet-app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Install dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
+
+4. Start the development server
+
+npm run dev
+
+
+Frameworks and Libraries Used
+
+1. React
+2. TypeScript
+3. Vite
+4. Tailwind CSS
+5. React Router DOM
+6. Lucide React Icons
+
+Assumptions and Notes
+The project is built using React with TypeScript.
+Vite is used for fast development and production builds.
+Tailwind CSS is used for styling.
+React Router DOM is used for routing.
+The app is designed as a timesheet management application.
+
+
+Time Spent
+
+Time spent: 12 hours
+
+## Project Structure
+
+The project is organized by feature and responsibility.
+
+- `src/api/` contains API-related logic such as authentication and timesheet API functions.
+- `src/components/` contains reusable UI components.
+- `src/components/TimesheetEntries/` contains the timesheet entry UI and related logic.
+- `src/components/TimesheetEntries/hooks/` contains custom hooks used by the TimesheetEntries component.
+- `src/components/TimesheetList/` contains the timesheet list UI and related logic.
+- `src/components/TimesheetList/hooks/` contains custom hooks used by the TimesheetList component.
+- `src/mock/db.json` contains mock data used for development/testing.
+- `src/pages/` contains page-level components such as the timesheets page and timesheet detail page.
+- `src/Router/` contains application routing logic.
+- `src/types/` contains TypeScript type definitions.
+- `src/utils/` contains reusable helper functions.
+
+The `hooks/` folders are kept inside their related component folders so that component-specific logic stays close to the UI that uses it.
