@@ -52,7 +52,7 @@ The app is designed as a timesheet management application.
 
 Time Spent
 
-Time spent: 12 hours
+Time spent: 25 hours
 
 ## Project Structure
 
