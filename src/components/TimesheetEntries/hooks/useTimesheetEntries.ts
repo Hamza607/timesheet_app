@@ -21,7 +21,6 @@ export function useTimesheetEntries(activeTimesheetId?: number | string) {
         }
 
         const data = await getTimesheetEntries(activeTimesheetId);
-        console.log("🚀 ~ fetchEntries ~ data:", data);
 
         setEntries(data);
       } catch (err: any) {
