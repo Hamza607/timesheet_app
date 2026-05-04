@@ -4,7 +4,7 @@ A React + TypeScript + Vite web application for managing timesheets.
 
 ## Live Demo
 
-https://timesheet-app-ddci.vercel.app/login
+https://timesheet-app-ddci.vercel.app
 
 ## GitHub Repository
 
